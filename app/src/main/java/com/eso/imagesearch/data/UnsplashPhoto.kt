@@ -1,5 +1,4 @@
-package com.eso.imagesearch
-import android.os.Parcel
+package com.eso.imagesearch.data
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
