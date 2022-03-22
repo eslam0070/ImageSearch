@@ -12,11 +12,13 @@ import kotlin.math.max
 @Singleton
 class UnsplashRepository @Inject constructor(private val unsplashApi: UnsplashApi) {
 
-    fun getSearchResults(query: String) = Pager(
-        config = PagingConfig(
-            pageSize = 20, maxSize = 100, enablePlaceholders = false
-        ),
-        pagingSourceFactory = {UnsplashPagingSource(unsplashApi,query)}
-    ).liveData
-
+    fun getSearchResults(query: String) =
+        Pager(
+            config = PagingConfig(
+                pageSize = 20,
+                maxSize = 100,
+                enablePlaceholders = false
+            ),
+            pagingSourceFactory = { UnsplashPagingSource(unsplashApi, query) }
+        ).liveData
 }
